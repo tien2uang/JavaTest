@@ -1,10 +1,21 @@
+import java.util.Scanner;
+
 public class Keypad {
-    public  String getAcountInput()
+    private Scanner scanner;
+    public Keypad()
     {
-        return "0";
+        scanner= new Scanner(System.in);
+    }
+    public  String getAccountInput()
+    {
+        return scanner.nextLine();
     }
     public int getPINInput()
     {
-        return 1;
+        return scanner.nextInt();
+    }
+    public int getAmountInput()
+    {
+        return scanner.nextInt();
     }
 }
