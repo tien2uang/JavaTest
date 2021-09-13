@@ -1,5 +1,5 @@
 public class Screen {
-    public void sendMessage()
+    public void displayMessage()
     {
 
     }
