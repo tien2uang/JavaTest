@@ -1,4 +1,8 @@
 public class Database {
+    public Boolean authenticateUser()
+    {
+        return true;
+    }
     public double getAvailableBalance()
     {
         return 0.0;
