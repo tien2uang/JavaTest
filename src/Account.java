@@ -1,26 +1,33 @@
 public class Account {
     private String accountNumber;
     private int pin;
-    private double availableBalance;
+
     private double totalBalance;
-    public Boolean validatePIN()
+    public Account(String accountNumber,int pin,double totalBalance)
     {
-        return  true;
-    }
+        this.accountNumber=accountNumber;
+        this.pin=pin;
 
-    public void credit()
+        this.totalBalance=totalBalance;
+    }
+    public Boolean validatePIN(int _pin)
     {
-
+        if(this.pin==_pin)
+        {
+            return  true;
+        }
+        else return false;
     }
-    public  void debit()
+
+    public void credit(double amount)
     {
+        this.totalBalance+=amount;
+    }
+    public  void debit(double amount)
+    {
+        this.totalBalance-=amount;
 
     }
-
-    public double getAvailableBalance() {
-        return availableBalance;
-    }
-
     public double getTotalBalance() {
         return totalBalance;
     }
