@@ -29,6 +29,8 @@ public class Withdraw extends Transaction{
                     if(cashDispenser.isSufficientCashAvailable(this.amount))
                     {
                         database.getCurrentAccount(getAccountNumber()).debit(this.amount);
+                        cashDispenser.dispenseCash(this.amount);
+                        cashDispensed=true;
                     }
                     else
                     {
